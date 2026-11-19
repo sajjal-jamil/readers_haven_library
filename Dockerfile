@@ -18,4 +18,4 @@ COPY --from=builder /app/dist /usr/share/nginx/html
 # expose port
 EXPOSE 80
 #start nginx
-CMD["nginx" , "-g" , "deamon off;"]
+CMD ["nginx", "-g", "daemon off;"]
