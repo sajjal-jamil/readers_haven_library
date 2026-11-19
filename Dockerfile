@@ -12,7 +12,7 @@ COPY styles/ ./styles/
 # build websites
 RUN npm run build
 # stage 2 serve website using nginx
-FROM nginx1.27-alpine
+FROM nginx:1.27-alpine
 # copy website from builder stage
 COPY --from=builder /app/dist /usr/share/nginx/html
 # expose port
