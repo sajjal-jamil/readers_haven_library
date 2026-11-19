@@ -236,7 +236,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .plan:first-child { border-top: 0; }
   .plan .who { min-height: 0; }
   .rules-grid, .join-steps { grid-template-columns: 1fr; }
-
+}
 /* ---------- 8. Services ---------- */
 .service { display: grid; grid-template-columns: 72px 1.1fr 1fr; gap: clamp(20px, 4vw, 64px); padding: clamp(32px, 4.4vw, 56px) 0; border-top: 1px solid var(--line); }
 .services-list li:last-child .service { border-bottom: 1px solid var(--line); }
@@ -254,4 +254,35 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 @media (max-width: 760px) {
   .service { grid-template-columns: 1fr; gap: 20px; }
   .service .n { padding-top: 0; }
+}
+
+/* ---------- 9. Contact ---------- */
+.contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: clamp(40px, 8vw, 128px); align-items: start; }
+.reach > div { padding: 22px 0; border-top: 1px solid var(--line); }
+.reach > div:last-child { border-bottom: 1px solid var(--line); }
+.reach dt { margin-bottom: 6px; }
+.reach dd, .reach address { font-size: 1.125rem; font-style: normal; letter-spacing: -0.01em; }
+.reach a { border-bottom: 1px solid transparent; transition: border-color .2s ease, color .2s ease; }
+.reach a:hover { color: var(--clay); border-color: var(--clay); }
+.reach small { display: block; color: var(--ink-2); font-size: 0.9rem; margin-top: 4px; }
+
+.form-panel { background: var(--paper-2); padding: clamp(28px, 4vw, 52px); border-radius: var(--radius); }
+.form-panel h2 { font-size: 1.75rem; margin-bottom: 8px; }
+.form-panel > p { color: var(--ink-2); margin-bottom: 36px; font-size: 0.96rem; }
+.field { margin-bottom: 28px; }
+.field label { display: block; margin-bottom: 4px; font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.04em; color: var(--ink-2); }
+.field input, .field textarea {
+  width: 100%; padding: 10px 0 12px;
+  background: transparent; color: var(--ink);
+  border: 0; border-bottom: 1px solid #9aa39c; border-radius: 0;
+  font: inherit; font-size: 1.0625rem;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.field textarea { resize: vertical; min-height: 120px; line-height: 1.55; }
+.field input:focus, .field textarea:focus { outline: 0; border-color: var(--forest); box-shadow: 0 1px 0 var(--forest); }
+.form-note { margin: 18px 0 0; font-size: 0.8125rem; color: var(--ink-2); }
+
+/* Contact responsive */
+@media (max-width: 860px) {
+  .contact-grid { grid-template-columns: 1fr; }
 }
