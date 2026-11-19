@@ -14,7 +14,7 @@ RUN npm run build
 # stage 2 serve website using nginx
 FROM nginx1.27-alpine
 # copy website from builder stage
-COPY --from=builder /app/dist/usr/share/nginx/html
+COPY --from=builder /app/dist /usr/share/nginx/html
 # expose port
 EXPOSE 80
 #start nginx
